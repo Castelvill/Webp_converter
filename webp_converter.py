@@ -10,9 +10,6 @@ if len(sys.argv) >= 2:
 
 webps = glob.glob(where+'*.webp')
 
-#This is recursive search - tested only on linux
-#webps = glob.glob(where+'**/*.webp', recursive=True)
-
 for img in webps:
 	im = Image.open(img).convert("RGB")
 	im.save(img.split(".")[0]+".jpg", jpeg)
