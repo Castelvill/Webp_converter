@@ -13,7 +13,7 @@ webps = glob.glob(where+'*.webp')
 
 for img in webps:
 	im = Image.open(img).convert("RGB")
-	im.save(img.split(".webp")[0]+".jpg", jpeg)
+	im.save(img.split(".webp")[0]+".jpg", "JPEG")
 	os.remove(img)
 	
 print(f"Updated: {len(webps)}")
